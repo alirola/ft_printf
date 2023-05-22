@@ -1,8 +1,10 @@
-NAME = ft_printf.a
+NAME = libftprintf.a
 
 FLAGS = -Wall -Werror -Wextra
 
-FILES = 
+FILES = ft_printchar.c\
+		ft_printhexa.c\
+		ft_putchar.c\
 
 OBJS = $(FILES:.c=.o)
 
@@ -21,14 +23,6 @@ fclean:
 	rm -rf $(NAME) $(OBJS)
 
 re:
-	all
+	all fclean
 
 .PHONY: all re fclean clean
-
- ▄▀▀█▄   ▄▀▀▄ ▀▄  ▄▀▀▀▀▄   ▄▀▀▄▀▀▀▄  ▄▀▀█▄   ▄▀▀▄ █ 
-▐ ▄▀ ▀▄ █  █ █ █ █      █ █   █   █ ▐ ▄▀ ▀▄ █  █ ▄▀ 
-  █▄▄▄█ ▐  █  ▀█ █      █ ▐  █▀▀█▀    █▄▄▄█ ▐  █▀▄  
- ▄▀   █   █   █  ▀▄    ▄▀  ▄▀    █   ▄▀   █   █   █ 
-█   ▄▀  ▄▀   █     ▀▀▀▀   █     █   █   ▄▀  ▄▀   █  
-▐   ▐   █    ▐            ▐     ▐   ▐   ▐   █    ▐  
-        ▐                                   ▐       
