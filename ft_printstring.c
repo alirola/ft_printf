@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printstring.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alirola- <alirola-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 17:20:16 by alirola-          #+#    #+#             */
-/*   Updated: 2023/05/23 14:43:57 by alirola-         ###   ########.fr       */
+/*   Created: 2023/05/23 14:40:47 by alirola-          #+#    #+#             */
+/*   Updated: 2023/05/23 14:43:09 by alirola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <unistd.h>
+#include "ft_printf.h"
 
-int	ft_putchar(char c);
-int	ft_printchar(char c);
-int	ft_printhexa(unsigned long long n, char c);
-int	ft_printdec(int nb);
-int	ft_printstring(char *str);
-#endif
+int	ft_printstring(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+		return (ft_printstring("(null)"));
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	return (i);
+}
