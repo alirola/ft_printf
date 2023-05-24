@@ -7,24 +7,28 @@ FILES = ft_printchar.c\
 		ft_putchar.c\
 		ft_printdec.c\
 		ft_printstring.c\
+		ft_printf.c\
+		ft_printunsigned.c\
+		ft_printptr.c\
 
 OBJS = $(FILES:.c=.o)
 
-all = $(NAME)
+LIB = ar rcs
+
+all : $(NAME)
 
 $(NAME) : $(OBJS)
-	ar rcs $(NAMES) $(BONUS)
+	$(LIB) $(NAME) $(OBJS)
 
 $(OBJS) : $(FILES)
 	gcc $(FLAGS) -c $(FILES)
 
 clean:
-	rm -rf $(OBJS)
+	rm -f $(OBJS)
 
-fclean:
-	rm -rf $(NAME) $(OBJS)
+fclean: clean
+	rm -f $(NAME)
 
-re:
-	all fclean
+re: fclean all
 
-.PHONY: all re fclean clean
+.PHONY: re all fclean clean
