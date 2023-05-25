@@ -6,7 +6,7 @@
 /*   By: alirola- <alirola-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 16:10:25 by alirola-          #+#    #+#             */
-/*   Updated: 2023/05/24 16:22:22 by alirola-         ###   ########.fr       */
+/*   Updated: 2023/05/25 16:28:29 by alirola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_printunsigned(unsigned int uns)
 	c = 0;
 	if (uns >= 10)
 		c += ft_printunsigned(uns / 10);
-	ft_putchar(uns % 10 + '0');
+	ft_printchar(uns % 10 + '0');
 	c++;
 	return (c);
 }

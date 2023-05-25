@@ -6,7 +6,7 @@
 /*   By: alirola- <alirola-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 17:20:16 by alirola-          #+#    #+#             */
-/*   Updated: 2023/05/24 16:47:50 by alirola-         ###   ########.fr       */
+/*   Updated: 2023/05/25 16:29:07 by alirola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-int	ft_putchar(char c);
 int	ft_printchar(char c);
 int	ft_printhexa(unsigned long long n, char c);
 int	ft_printdec(int nb);

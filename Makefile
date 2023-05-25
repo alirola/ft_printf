@@ -4,7 +4,6 @@ FLAGS = -Wall -Werror -Wextra
 
 FILES = ft_printchar.c\
 		ft_printhexa.c\
-		ft_putchar.c\
 		ft_printdec.c\
 		ft_printstring.c\
 		ft_printf.c\

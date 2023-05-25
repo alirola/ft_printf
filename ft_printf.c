@@ -6,7 +6,7 @@
 /*   By: alirola- <alirola-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 14:57:01 by alirola-          #+#    #+#             */
-/*   Updated: 2023/05/24 16:47:10 by alirola-         ###   ########.fr       */
+/*   Updated: 2023/05/25 16:28:29 by alirola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	ft_filter(char const *content, int i, va_list *args)
 	if (content[i] == 'x' || content[i] == 'X')
 		counter += ft_printhexa(va_arg(*args, unsigned int), content[i]);
 	if (content[i] == '%')
-		counter += ft_putchar('%');
+		counter += ft_printchar('%');
 	return (counter);
 }
 
@@ -47,7 +47,7 @@ int	ft_printf(char const *content, ...)
 	while (content[i])
 	{
 		if (content[i] != '%')
-			c += ft_putchar(content[i]);
+			c += ft_printchar(content[i]);
 		else
 		{
 			i++;

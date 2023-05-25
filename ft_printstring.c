@@ -6,7 +6,7 @@
 /*   By: alirola- <alirola-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 14:40:47 by alirola-          #+#    #+#             */
-/*   Updated: 2023/05/23 14:43:09 by alirola-         ###   ########.fr       */
+/*   Updated: 2023/05/25 16:28:29 by alirola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_printstring(char *str)
 		return (ft_printstring("(null)"));
 	while (str[i])
 	{
-		ft_putchar(str[i]);
+		ft_printchar(str[i]);
 		i++;
 	}
 	return (i);
